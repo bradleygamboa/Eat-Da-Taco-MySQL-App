@@ -3,10 +3,17 @@ var express = require('express');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var path = require('path');
+
+// connection and orm
 var connection = require('./burger/config/connection.js');
 var orm = require('./burger/config/orm.js');
 
-// making the variable app for express and using port 3000 
+// handlebars & handlebars express 
+// var exphbs = require('express-handlebars');
+// app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+// app.set('view engine', 'handlebars');
+
+// making the variable app for express and using port 3000
 var app = express();
 var appPORT = process.env.PORT || 3000;
 
@@ -18,7 +25,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('public'));
 
 // requriing of the api routes
-require('./burger/routing/api-routes.js')(app); 
+require('./burger/routing/api-routes.js')(app);
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+'/burger/public/index.html'));
