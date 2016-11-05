@@ -29,6 +29,9 @@ require('./burger/routing/api-routes.js')(app);
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+'/burger/public/index.html'));
+
+    // handlebars request 
+    // res.render('index', data);
 });
 
 // listening for the server and console logging the port number

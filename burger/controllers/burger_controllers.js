@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Burger App</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js'></script>
-</head>
-<body>
-
-<div class='container'>
-	<div class='jumbotron'>
-		<h1>Yumm Yumm for my Tumm Tumm</h1>
-	</div>
-	<div class='row'>
-		<div class='col-md-12'>
-			<input type='text' class='form-control' id='burgerInput'>
-			<button id='button'>Submit</button>
-		</div>
-	</div>
-	<br>
-	<div class='row'>
-		<div class='col-md-6'>
-			<h2>Ready on the grill:</h2>
-			<br>
-			<br>
-			<span id='notEatenArea'></span>
-		</div>
-		<div class='col-md-6'>
-			<h2>Already in my BELLY:</h2>
-			<br>
-			<br>
-			<span id='eatenArea'></span>
-		</div>
-	</div>
-</div>
-<!-- <script src="../controllers/burger_controllers.js"></script> -->
-<script type="text/javascript">
-	$(document).ready(function(){
+$(document).ready(function(){
 
 	// calls our renderBurger function to populate the page with all burgers from the database 
 	renderBurgers();
@@ -117,6 +79,5 @@
 	});
 
 });
-</script>
-</body>
-</html>
+
+module.exports = burgers;
