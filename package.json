@@ -1,7 +1,7 @@
 {
   "name": "week-14-homework",
   "version": "1.0.0",
-  "description": "eat da burger! pt 1",
+  "description": "eat da taco",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
